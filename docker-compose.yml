@@ -4,10 +4,12 @@ services:
   app:
     image: willyb321/sharry
     build: .
+    env_file: .env
     environment:
-      - SHARRY_BIND_HOST=localhost
+      - SHARRY_BIND_HOST=0.0.0.0
       - SHARRY_DB_PASSWORD=sharry
       - SHARRY_BIND_PORT=9090
+      - SHARRY_BASE_URL=http://localhost:9090
     ports:
       - 9090:9090
     networks:
