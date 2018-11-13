@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  app:
+    image: willyb321/sharry
+    build: .
+    environment:
+      - SHARRY_BIND_HOST=localhost
+      - SHARRY_DB_PASSWORD=sharry
+      - SHARRY_BIND_PORT=9090
+    ports:
+      - 9090:9090
+    networks:
+      - sharry
+    links:
+      - db:db
+
+  db:
+    image: bitnami/postgresql
+    environment:
+      - POSTGRESQL_PASSWORD=sharry
+      - POSTGRESQL_DATABASE=sharry
+    networks:
+      - sharry
+    volumes:
+      - sharry_db:/bitnami
+
+
+
+
+networks:
+  sharry:
+
+volumes:
+  sharry_db:

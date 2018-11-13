@@ -1,0 +1,1 @@
+SHARRY_JAVA_OPTS="-Dsharry.web.bind-host=$SHARRY_BIND_HOST -Dsharry.web.bind-port=$SHARRY_BIND_PORT -Dsharry.web.baseUrl=$SHARRY_BASE_URL -Dsharry.db.drive=org.postgresql.Driver -Dsharry.db.user=postgres -Dsharry.db.password=$SHARRY_DB_PASSWORD -Dsharry.db.url=jdbc:postgresql://db/sharry -Dsharry.authc.extern.admin.enable=true" /app/modules/cli/target/scala-*/sharry-cli-*-.jar.sh
