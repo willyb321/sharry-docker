@@ -12,6 +12,8 @@ services:
       - SHARRY_BASE_URL=http://localhost:9090
     networks:
       - sharry
+    depends_on:
+      - db
     links:
       - db:db
 
