@@ -10,8 +10,6 @@ services:
       - SHARRY_DB_PASSWORD=sharry
       - SHARRY_BIND_PORT=9090
       - SHARRY_BASE_URL=http://localhost:9090
-    ports:
-      - 9090:9090
     networks:
       - sharry
     links:
