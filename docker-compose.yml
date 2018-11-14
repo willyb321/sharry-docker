@@ -16,6 +16,8 @@ services:
       - db:db
 
   web:
+    depends_on:
+      - app
     image: nginx
     labels:
       - "traefik.docker.network=sharry"
